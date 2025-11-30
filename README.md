@@ -1,17 +1,59 @@
-# React + Vite
+🎬 Movies App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Учебный проект на React, использующий OMDb API для поиска и отображения фильмов.
+Интерфейс построен с помощью MaterializeCSS.
 
-Currently, two official plugins are available:
+🚀 Функциональность
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Поиск фильмов, сериалов по названию
 
-## React Compiler
+Фильтрация по типу (movie / series )
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Отображение карточек фильмов
 
-## Expanding the ESLint configuration
+Лоадер во время загрузки данных
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# Movies
+Работа с внешним REST API (OMDb)
+
+🛠 Стек технологий
+
+React (CRA или Vite)
+
+JavaScript
+
+MaterializeCSS
+
+Fetch API
+
+OMDb API
+
+🔧 Установка и запуск
+# Клонировать проект
+git clone https://github.com/kolcman/movies.git
+
+# Перейти в папку
+cd movies
+
+# Установить зависимости
+npm install
+
+# Запустить проект
+npm start
+
+🔑 Работа с OMDb API
+
+Для работы требуется API Key:
+https://www.omdbapi.com/
+
+Добавь ключ в запрос в вашем сервисе, например:
+
+const API_KEY = 'your_api_key';
+fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=${searchValue}`)
+
+🎨 UI
+
+Интерфейс построен на MaterializeCSS, используется grid, карточки и элементы управления.
+
+📜 Лицензия
+
+Свободно использовать в учебных целях.
