@@ -12,15 +12,20 @@ export default class Main extends Component {
     fetch("http://www.omdbapi.com/?apikey=e4adf7db&s=matrix")
       .then((response) => response.json())
       .then((data) => this.setState({ movies: data.Search }));
-    console.log(this.state.movies);
   }
+
+  searchMovies = (str) => {
+    fetch(`http://www.omdbapi.com/?apikey=e4adf7db&s=${str}`)
+      .then((response) => response.json())
+      .then((data) => this.setState({ movies: data.Search }));
+  };
 
   render() {
     const { movies } = this.state;
 
     return (
       <main className="container content">
-        <Search />
+        <Search searchMovies={this.searchMovies} />
         {movies.length ? (
           <Movies movies={this.state.movies} />
         ) : (
