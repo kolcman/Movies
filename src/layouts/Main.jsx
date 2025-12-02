@@ -14,8 +14,12 @@ export default class Main extends Component {
       .then((data) => this.setState({ movies: data.Search }));
   }
 
-  searchMovies = (str) => {
-    fetch(`http://www.omdbapi.com/?apikey=e4adf7db&s=${str}`)
+  searchMovies = (str, type) => {
+    fetch(
+      `http://www.omdbapi.com/?apikey=e4adf7db&s=${str}${
+        type !== "all" ? `&type=${type}` : ""
+      }`
+    )
       .then((response) => response.json())
       .then((data) => this.setState({ movies: data.Search }));
   };
