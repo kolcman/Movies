@@ -21,7 +21,7 @@
 
 ## 🛠 Стек технологий
 
-React (CRA или Vite)
+React (Vite)
 
 JavaScript
 
@@ -45,14 +45,6 @@ OMDb API
 4. Запустить проект
    npm start
 
-## 🔑 Работа с OMDb API
-
-1. Для работы требуется API Key:
-   https://www.omdbapi.com/
-
-2. Добавь ключ в запрос в вашем сервисе, например:
-   const API_KEY = 'your_api_key';
-   fetch(`https://www.omdbapi.com/?apikey=${API_KEY}&s=${searchValue}`)
 
 ## 🎨 UI
 
